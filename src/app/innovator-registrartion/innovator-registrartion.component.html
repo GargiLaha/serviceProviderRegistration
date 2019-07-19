@@ -1,0 +1,124 @@
+<body class="view">
+  <div class="mask rgba-gradient">
+
+    <br>
+    <br>
+
+    <div class="height1" style="background-color: white;">
+      <br>
+      <p style="background-color: white;text-align: center;">Registration</p>
+    </div>
+    <mat-horizontal-stepper linear #stepper class="height">
+
+
+      <mat-step [stepControl]="firstFormGroup">
+        <form [formGroup]="firstFormGroup" class="form">
+          <ng-template matStepLabel>About</ng-template>
+          <br>
+          <br>
+          <mat-form-field labelPosition="top">
+
+            <input matInput placeholder="First Name" formControlName="FirstName" required>
+          </mat-form-field>
+          <br>
+          <mat-form-field>
+
+            <input matInput placeholder="Last Name" formControlName="LastName" required>
+          </mat-form-field>
+          <div>
+            <button mat-button matStepperNext class="btn">Next</button>
+            <!-- <button mat-button matStepperNext  class="btn1" routerLink="/register">Cancel</button> -->
+
+          </div>
+        </form>
+      </mat-step>
+
+
+      <mat-step [stepControl]="secondFormGroup">
+        <form [formGroup]="secondFormGroup" class="form">
+          <ng-template matStepLabel>Details</ng-template>
+          <br>
+          <br>
+          <mat-form-field>
+            <input matInput placeholder="Email" formControlName="email" required>
+          </mat-form-field>
+          <br>
+          <mat-form-field>
+            <input type="password" matInput placeholder="Password(Min length 8)" formControlName="password"
+              minlength="8" required>
+          </mat-form-field>
+          <br>
+
+          <mat-form-field>
+            <mat-label>Select your Domain (required)</mat-label>
+            <select #domain matNativeControl formControlName="domainCtrl" required>
+              <option label="--select something --"></option>
+              <option value="IT">IT</option>
+              <option value="Tourism">TOURISM</option>
+            </select>
+
+          </mat-form-field>
+
+
+          <br>
+          <div>
+            <button mat-button matStepperPrevious class="btn">Back</button>
+            <button mat-button matStepperNext class="btn">Next</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step [stepControl]="thirdFormGroup">
+        <form [formGroup]="thirdFormGroup" class="form">
+          <ng-template matStepLabel>Final Step</ng-template>
+
+          <mat-form-field class="example-chip-list">
+            <!-- <mat-select #subDomain placeholder="Sub-Domain" formControlName="subdomain" multiple>
+              <mat-option *ngFor="let subDomain of subDomainList" [value]="subDomain">{{subDomain}}</mat-option>
+            </mat-select> -->
+            <mat-chip-list #chipList aria-label="subdomain selection">
+                <mat-chip
+                  *ngFor="let subdomain of subDomains"
+                  [selectable]="selectable"
+                  [removable]="removable"
+                  (removed)="remove(subdomain)">
+                  {{subdomain}}
+                  <mat-icon matChipRemove *ngIf="removable">close</mat-icon>
+                </mat-chip>
+                <input
+                  placeholder="Select Sub-domain"
+                  #subDomainInput
+                  [formControl]="subDomainCtrl"
+                  [matAutocomplete]="auto"
+                  [matChipInputFor]="chipList"
+                  [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                  [matChipInputAddOnBlur]="addOnBlur"
+                  (matChipInputTokenEnd)="add($event)">
+              </mat-chip-list>
+              <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+                <mat-option *ngFor="let subdomain of filteredSubDomains | async" [value]="subdomin">
+                  {{subdomain}}
+                </mat-option>
+              </mat-autocomplete>
+
+          </mat-form-field>
+          <br>
+
+
+          <br>
+
+          <mat-form-field>
+            <input matInput placeholder="About">
+          </mat-form-field>
+          <br>
+
+
+          <div>
+            <button mat-button matStepperPrevious class="btn">BACK</button>
+            <!-- <button mat-button class="btn3" (click)="stepper.reset()">RESET</button> -->
+            <button mat-button class="btn btn3" (click)="register()"> SUBMIT </button>
+          </div>
+        </form>
+      </mat-step>
+    </mat-horizontal-stepper>
+  </div>
+</body>

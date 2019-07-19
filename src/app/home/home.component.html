@@ -1,0 +1,72 @@
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap');
+    @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap');
+
+    </style><!-- Main navigation -->
+
+
+<header>
+        <!--Navbar-->
+        <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+          <mdb-navbar-brand>
+            <a class="logo navbar-brand waves-light" mdbWavesEffect routerLink="/home"><strong><b>COLLAB-JUNCTION</b></strong></a>
+          </mdb-navbar-brand>
+          <links>
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active waves-light" mdbWavesEffect>
+                <a class="nav-link" #hom routerLink="/home">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item waves-light" mdbWavesEffect>
+                <a class="nav-link" routerLink="/login">Log In</a>
+              </li>
+
+              <li class="nav-item waves-light" mdbWavesEffect>
+                <a class="nav-link" #abt routerLink="#">About</a>
+              </li>
+
+              <!-- <li class="nav-item waves-light" mdbWavesEffect>
+                <a class="nav-link" routerLink="/signupModal" >Sign Up</a>
+              </li> -->
+
+            </ul>            
+          </links>
+        </mdb-navbar>
+        <!-- Full Page Intro -->
+        <div class="view">
+          <!-- Mask & flexbox options-->
+          <div class="mask rgba-gradient d-flex justify-content-center align-items-center">
+            <!-- Content -->
+            <div class="container">
+              <!--Grid row-->
+              <div class="row">
+                <!--Grid column-->
+                <div class="col-md-6 white-text text-center text-md-left mt-xl-5 mb-5 wow fadeInLeft" data-wow-delay="0.3s">
+                  <h1 class="h1-responsive font-weight-bold mt-sm-5">Where Ideas Become Reality.</h1>
+                  <hr class="hr-light">
+                  <!-- <a mdbBtn color="white" mdbWavesEffect>I want to post an Idea</a> -->
+                  <a routerLink='/innovatorregistration' mdbBtn color="white" outline="true" mdbWavesEffect>I WANT TO POST AN IDEA</a>
+                  <a routerLink='/serviceproviderregistration' mdbBtn color="white" outline="true" mdbWavesEffect>I WANT TO WORK ON AN IDEA</a>
+                         </div>
+                <!--Grid column-->
+                <!--Grid column-->
+                <div class="col-md-6 col-xl-5 mt-xl-5 wow fadeInRight" data-wow-delay="0.3s">
+                  <img src="https://mdbootstrap.com/img/Mockups/Transparent/Small/admin-new.png" alt="" class="img-fluid">
+                </div>
+                <!--Grid column-->
+              </div>
+              <!--Grid row-->
+            </div>
+            <!-- Content -->
+          </div>
+          <!-- Mask & flexbox options-->
+
+        </div>
+        <!-- Full Page Intro -->
+      </header>
+      <!-- Main navigation -->
+
+      <app-recent-ideas></app-recent-ideas>
+
+      <app-about></app-about>
+
+      <app-footer></app-footer>

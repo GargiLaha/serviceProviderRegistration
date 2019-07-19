@@ -1,0 +1,54 @@
+<section class="section">
+
+        <!--Section heading-->
+        <h2 class="h1-responsive font-weight-bold text-center my-5">Our Recent Ideas</h2>
+        <!-- Section description -->
+        <h4 class="grey-text text-center w-responsive mx-auto mb-5">See some of our most recent ideas published.</h4>
+          <!-- <a mdbBtn gradient="purple" rounded="true" class="white-text mb-4" mdbWavesEffect>Button</a> -->
+
+
+
+          <!-- <div *ngFor=" let tweet of singleCategory;  let i=index">
+    <div *ngIf="i<2">
+        {{tweet}}
+    </div>
+</div> -->
+<!-- Card -->
+<div class="card-deck" >
+
+        <div class="wow animated flipInX card card-image mb-3" *ngFor="let data of arrayOfIdeas| slice:0:3" data-wow-delay="0.6s" style="background-image: url(https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg);">
+
+            <!-- Content -->
+            <div class="text-white text-center flex-center align-items-center rgba-black-strong py-5 px-4">
+              <div>
+                <h4 class="white-text"><i class="fas fa-lightbulb"></i> {{data.domain}}</h4>
+                <h5 class="white-text text-muted"><i class="fas fa-clock-pr-2"></i> {{data.timestamp | date: 'yyyy/MM/dd'}}</h5>
+
+                <h3 class="card-title pt-2"><strong>{{data.title}}</strong></h3>
+                <p>{{data.description}}</p>
+                <div class="wrapper">
+                <a routerLink='/login' mdbBtn color="white" outline="true" mdbWavesEffect>APPLY</a>
+              </div>
+              </div>
+            
+            <!-- Content -->
+            </div>
+            
+          </div>
+
+
+  
+  <!-- Card -->
+  
+  </div>
+<div class="wrapper">
+  <a routerLink='/allIdeas' mdbBtn color="black" outline="true" mdbWavesEffect>SHOW MORE</a>
+</div>
+  <!-- Card -->
+  </section>
+
+
+
+
+
+ 

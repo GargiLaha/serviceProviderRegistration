@@ -1,0 +1,37 @@
+{
+    "ideas": [
+      {
+          "id":1,
+          "ideaId":1,
+          "ideaTitle" : "FREELANCE PHOTOGRAPHY",
+          "ideaDomain":"Tourism",
+          "ideaSubDomain" : "Photography",
+          "ideaDescription": "We are looking for someone to join the Production Team. Your mission will be to organize photoshoots for small and key customers, by contacting photographers and clients (all round the world, from our office in Bengaluru).You will therefore be in touch with Meero's, clients, and in charge of our most important processes' successfull conduct.",
+          "ideaBudget":"300$",
+          "ideaResources" :"Professional Photographer",
+          "ideaPostedBy": "Ashok Kumar"
+      },
+     {
+         "id":2,
+          "ideaId":2,
+          "ideaTitle" : "ROOM VISUALIZATION MOBILE PHOTOGRAPHY",
+          "ideaDomain":"IT",
+          "ideaSubDomain" : "Mobile development",
+          "ideaDescription": "An android mobile application to visualize room located at a specific location by exploiting the technology of virtual reality. Our project requires a team of software and full stack developers who are proficient in studying and experimenting on virtual reality.",
+          "ideaBudget":"2500$",
+          "ideaResources" :"Android Developer(2), Software Architect(1)",
+          "ideaPostedBy": "Selin"
+      },   
+   {
+       "id":3,
+          "ideaId":3,
+          "ideaTitle" : "Traffic Controller Bot",
+          "ideaDomain":"IT",
+          "ideaSubDomain" : "Robotics",
+          "ideaDescription": "A bot should be able to control the traffic efficiently. should stop the traffic depending on the number of vehicles.",
+          "ideaBudget":"3000$",
+          "ideaResources" :"Software Developer(3), Hardware Engineer(2), AWS Engineer(1)",
+          "ideaPostedBy": "Gargi"
+      }
+  ]
+  }

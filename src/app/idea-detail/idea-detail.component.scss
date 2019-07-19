@@ -1,0 +1,25 @@
+.container{
+    background: url(https://wallpapersmug.com/download/3840x2400/4d7d03/light-colors-geometric-pattern-abstract.jpg)
+    center no-repeat ;
+    background-size: cover;
+}
+
+.rowTitle{
+    margin-left: 45%;
+}
+
+.card{
+  margin: auto;
+  opacity: 0.7;
+  background: white;
+  margin-bottom: 20px;
+}
+
+.card:hover{
+    opacity: 1.0;
+    background: white;
+  }
+
+  .btn.btn-danger{
+      color:white;
+  }

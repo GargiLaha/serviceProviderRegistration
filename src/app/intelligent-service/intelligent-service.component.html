@@ -1,0 +1,50 @@
+
+<div class="img">
+<mat-tab-group (selectedTabChange) = "myClick($event)">
+  <mat-tab (selectedTabChange) = "myClick()" label="{{role}}" *ngFor="let role of roles">
+    
+          <div class="container">
+       
+              <div class="row">
+             <br>
+      <mat-card class="col-md-4" *ngFor = "let provider of filteredProviders" class="example-card">
+        <br>
+
+          <mat-card-header>
+           <b><h3>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>{{provider.name}}</mat-card-title>
+            <mat-card-subtitle>{{provider.emailId}}</mat-card-subtitle>
+           </h3></b>
+          </mat-card-header>
+           
+          <mat-card-content>
+            <b>
+             <h5>About :</h5>  
+             <span>{{provider.about}}</span>
+             <h5>Charge/hr</h5>
+              <span>{{provider.chargePerHour}}</span>
+             <h5>Domain</h5> 
+              <span>{{provider.domain}}</span>
+              <h5>Skills</h5>
+              <span *ngFor = "let skill of provider.skills" >
+                {{skill}}
+              </span>  
+              </b>          
+          </mat-card-content>
+          
+          <br>
+          <mat-card-actions>
+            <button (click)="accept(provider)" mat-button>Accept</button>
+            <button (click)="reject(provider)" mat-button>Reject</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+        <button (click)="done()" background-color="black" mat-button>DONE</button>
+</div>
+
+  </mat-tab>
+
+</mat-tab-group>
+</div>
+

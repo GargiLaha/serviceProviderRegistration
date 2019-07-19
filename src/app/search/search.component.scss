@@ -1,0 +1,53 @@
+.navbar-brand {
+    text-decoration: none;
+    color:white;
+  }
+  a{
+    color: white;
+  }
+  
+  .nav-item{
+    color: white;
+  }
+  
+  
+  
+  .track-card {
+      margin: 15px;
+      bottom: 20%;
+      top:20%;
+    }
+    
+    .track-card:hover {
+      box-shadow: 10px 10px 10px black;
+    }
+    
+    button {
+      font-size: 25px;
+      margin: 5px;
+    }
+    
+    .d-none {
+      display: none;
+    }
+    
+    button:hover {
+      box-shadow: 5px 5px black;
+    }
+  
+    /* Required for full background image */
+  
+  .btn-danger{
+    height: 58px;
+  }
+  .card{
+    margin-right: 20px;
+    margin-bottom: 20px;
+    
+  }
+  
+  .row{
+    justify-content: space-evenly;
+  }
+  
+  

@@ -1,0 +1,83 @@
+
+
+
+<header>
+  <!--Navbar-->
+<mdb-navbar SideClass="blue-gradient navbar navbar-expand-lg" [containerInside]="false">
+
+  <!-- Navbar brand -->
+  <mdb-navbar-brand><a class="navbar-brand" routerLink="#">COLLAB-JUNCTION</a></mdb-navbar-brand>
+
+  <!-- Collapsible content -->
+  <links>
+
+    <!-- Links -->
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a routerLink="/home" class="nav-link waves-light" mdbWavesEffect><mdb-icon fas icon="home"></mdb-icon> HOME <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a (click)="goToProfile()" class="nav-link waves-light" mdbWavesEffect><mdb-icon fas icon="user"></mdb-icon> PROFILE </a>
+      </li>
+
+      <li class="nav-item">
+          <a routerLink="/home" class="nav-link waves-light" mdbWavesEffect><mdb-icon fas icon="cog"></mdb-icon> LOG OUT </a>
+        </li>
+
+        <li class="nav-item">
+          <a (click)="goToAllIdeas()" class="nav-link waves-light" mdbWavesEffect><mdb-icon fas icon="user"></mdb-icon> IDEAS</a>
+        </li>
+
+     
+
+    </ul>
+    <!-- Links -->
+  </links>
+  <!-- Collapsible content -->
+
+</mdb-navbar>
+<!--/.Navbar-->
+</header>
+<!-- details card section starts from here -->
+<!-- <body class="view">
+    <div class="mask rgba-gradient"> -->
+      <body class="view">
+        <div class="mask rgba-gradient">
+<div class="bg-image">
+
+    <section class="details-card">
+        <h2 class="h1-responsive font-weight-bold text-center my-5">RECOMMENDED IDEAS</h2>
+	
+       <div class="container">
+         
+         <div class="row">
+           <div class="col-md-4" *ngFor="let data of recommendedIdeas">
+             <div class="card-content">
+               <div class="card-img">
+                 <img src="https://images.unsplash.com/photo-1474631245212-32dc3c8310c6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=924&q=80" alt="">
+                 <span><h4>{{data.domain}}</h4></span>
+               </div>
+               <div class="card-desc">
+             
+                 <p>{{data.ideaTitle}}</p>
+                 <p>{{data.ideaDescription}}</p>
+                 <p>{{data.subDomain}}</p>
+                 <p>{{data.roles}}</p>
+                 <div class="wrapper">
+                   <a (click)="applyForAnIdea(data.ideaTitle)" class="btn-card">Apply</a>  
+                 </div> 
+               </div>
+             </div>
+           </div>
+           </div>
+           </div>
+    </section>
+
+   
+</div>
+</div>
+    </body>
+
+
+
+<app-footer></app-footer>

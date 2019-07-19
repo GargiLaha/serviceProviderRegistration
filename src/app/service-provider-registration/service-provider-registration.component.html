@@ -1,0 +1,180 @@
+<body class="view">
+  <div class="mask rgba-gradient">
+
+    <br>
+    <div class="height1" style="background-color: white;">
+      <br>
+      <p style="background-color: white;text-align: center;">Registration</p>
+    </div>
+    <mat-horizontal-stepper linear #stepper class="height">
+
+
+      <mat-step [stepControl]="firstFormGroup">
+        <form [formGroup]="firstFormGroup" class="form">
+          <ng-template matStepLabel>About</ng-template>          <br>
+          <mat-form-field labelPosition="top">
+
+            <input matInput #name placeholder="First Name" formControlName="FirstName" required>
+          </mat-form-field>
+          <br>
+          <mat-form-field>
+
+            <input matInput placeholder="Last Name" formControlName="LastName" required>
+          </mat-form-field>
+          <div>
+            <button mat-button matStepperNext class="btn">Next</button>
+            <!-- <button mat-button matStepperNext  class="btn1" routerLink="/register">Cancel</button> -->
+          </div>
+        </form>
+      </mat-step>
+
+      <mat-step [stepControl]="secondFormGroup">
+        <form [formGroup]="secondFormGroup" class="form">
+          <ng-template matStepLabel>Details</ng-template>
+
+          <mat-form-field>
+            <input matInput #emailId placeholder="Email" formControlName="email" required>
+          </mat-form-field>
+          <br>
+          <mat-form-field>
+            <input #password type="password" matInput placeholder="Password(Min length 8)" formControlName="password"
+              minlength="8" required>
+          </mat-form-field>
+          <br>
+          <mat-form-field>
+            <mat-label>Select your Domain</mat-label>
+            <select #domain matNativeControl formControlName="domainCtrl" required>
+              <option label="--select something --"></option>
+              <option value="IT">IT</option>
+              <option value="Tourism">TOURISM</option>
+            </select>
+
+          </mat-form-field>
+          <ng-template matStepLabel>Fill out your subDomain</ng-template>
+
+          <br>
+          <div>
+            <button mat-button matStepperPrevious class="btn">BACK</button>
+            <button mat-button matStepperNext class="btn1">NEXT</button>
+          </div>
+        </form>
+      </mat-step>
+
+      <mat-step [stepControl]="thirdFormGroup">
+        <form [formGroup]="thirdFormGroup" class="form">
+          <ng-template matStepLabel>Final Step</ng-template>
+
+
+          <!-- Subdomain code goes here -->
+          <div>
+          <mat-form-field class="subdomainChips">
+            <mat-chip-list #chipList aria-label="subDomain selection">
+                <mat-chip
+                  *ngFor="let subDomain of subDomains"
+                  [selectable]="selectable"
+                  [removable]="removable"
+                  (removed)="remove(subDomain)">
+                  {{subDomain}}
+                  <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                </mat-chip>
+                <input
+                  placeholder="Select your sub-domain"
+                  #subDomainInput
+                  [formControl]="subDomainCtrl"
+                  [matAutocomplete]="auto"
+                  [matChipInputFor]="chipList"
+                  [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                  [matChipInputAddOnBlur]="addOnBlur"
+                  (matChipInputTokenEnd)="add($event)">
+              </mat-chip-list>
+              <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+                <mat-option *ngFor="let subDomain of filteredSubDomains | async" [value]="subDomain">
+                  {{subDomain}}
+                </mat-option>
+              </mat-autocomplete>
+          </mat-form-field>
+        </div>
+          <br>
+          <div>
+
+          <mat-form-field class="subdomainChips">
+              <mat-chip-list #chipListRole aria-label="Role selection">
+                  <mat-chip
+                    *ngFor="let role of roles"
+                    [selectable]="selectableRole"
+                    [removable]="removableRole"
+                    (removed)="removeRole(role)">
+                    {{role}}
+                    <mat-icon matChipRemove *ngIf="removableRole">cancel</mat-icon>
+                  </mat-chip>
+                  <input
+                    placeholder="Select your Role"
+                    #roleInput
+                    [formControl]="roleCtrl"
+                    [matAutocomplete]="autoRole"
+                    [matChipInputFor]="chipListRole"
+                    [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                    [matChipInputAddOnBlur]="addOnBlurRole"
+                    (matChipInputTokenEnd)="addRole($event)">
+                </mat-chip-list>
+                <mat-autocomplete #autoRole="matAutocomplete" (optionSelected)="selectedRole($event)">
+                  <mat-option *ngFor="let role of filteredRoles | async" [value]="role">
+                    {{role}}
+                  </mat-option>
+                </mat-autocomplete>
+            </mat-form-field>
+          </div>
+
+
+
+          <!-- Skill goes here -->
+          
+          <mat-form-field class="">
+              <mat-chip-list #chipListSkill aria-label="Skill selection">
+                  <mat-chip
+                    *ngFor="let skill of skills"
+                    [selectable]="selectableSkill"
+                    [removable]="removableSkill"
+                    (removed)="removeSkill(skill)">
+                    {{skill}}
+                    <mat-icon matChipRemove *ngIf="removableSkill">cancel</mat-icon>
+                  </mat-chip>
+                  <input
+                    placeholder="Select your Skill"
+                    #skillInput
+                    [formControl]="skillCtrl"
+                    [matAutocomplete]="autoSkill"
+                    [matChipInputFor]="chipListSkill"
+                    [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                    [matChipInputAddOnBlur]="addOnBlurSkill"
+                    (matChipInputTokenEnd)="addSkill($event)">
+                </mat-chip-list>
+                <mat-autocomplete #autoSkill="matAutocomplete" (optionSelected)="selectedSkill($event)">
+                  <mat-option *ngFor="let skill of filteredSkills | async" [value]="skill">
+                    {{skill}}
+                  </mat-option>
+                </mat-autocomplete>
+            </mat-form-field>
+
+
+
+
+          <br>  
+
+           
+            <br>
+
+          <ng-template matStepLabel>Fill out your Charge-per-Hour</ng-template>
+          <mat-form-field>
+            <input #charge matInput placeholder="Charge-Per-Hour" formControlName="chargePerHour" required>
+          </mat-form-field>
+
+          <div>
+            <button mat-button matStepperPrevious class="btn">BACK</button>
+            <button mat-button class="btn3" (click)="register()">SUBMIT</button>
+          </div>
+        </form>
+      </mat-step>
+    </mat-horizontal-stepper>
+  </div>
+</body>

@@ -1,0 +1,68 @@
+
+body{
+    background-image: url('https://mdbootstrap.com/img/Photos/Others/architecture.jpg'); 
+height:100%; 
+background-repeat: no-repeat; 
+background-size: cover; 
+background-position: center center;
+min-height: 100vh;
+  }
+
+  .rgba-gradient {
+    background: -moz-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+    background: -webkit-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+    background: -webkit-gradient(linear, 45deg, from(rgba(42, 27, 161, 0.7)), to(rgba(29, 210, 177, 0.7)));
+    background: -o-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+    background: linear-gradient(to 45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+    background: -webkit-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%)
+  }
+
+.navbar-brand {
+    text-decoration: none;
+    color:white;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.container{
+    color: white;
+   font-weight: bold;
+}
+
+button{
+    background-color: #4CAF50;
+    width: 120px;
+    color: white;
+    padding: 10px, 0px;
+    margin: 10%;
+}
+
+#butt{
+    display: inline-block ;
+    width:50%;
+}
+
+form
+{
+    overflow-y: auto;
+}
+
+.example-chip-list{
+    width: 400px;
+    margin-top: 40px;
+}
+
+::mat-chip-input .mat-input-element .ng-untouched .ng-pristine .ng-valid{
+ color: white;
+}
+
+#id02{
+    overflow-y: initial;
+}
+
+@media only screen and (max-width: 480px) {
+    .touch .modal .modal-body {
+      max-height: none; 
+    }
+  }

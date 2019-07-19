@@ -1,0 +1,99 @@
+<header>
+	<!--Navbar-->
+	<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+	  <mdb-navbar-brand>
+		<a class="logo navbar-brand waves-light" mdbWavesEffect routerLink="/home"><strong>COLLAB-JUNCTION</strong></a>
+	  </mdb-navbar-brand>
+	  <links>
+		<ul class="navbar-nav mr-auto">
+		  <li class="nav-item active waves-light" mdbWavesEffect>
+			<a class="nav-link" routerLink="/home">Home <span class="sr-only">(current)</span></a>
+		  </li>
+
+		  <li class="nav-item waves-light" mdbWavesEffect>
+			<a class="nav-link" routerLink="#">About</a>
+		  </li>
+
+		  <!-- <li class="nav-item waves-light" mdbWavesEffect>
+			<a class="nav-link" routerLink="/signupModal" >Sign Up</a>
+		  </li> -->
+
+		</ul>
+
+
+		
+		
+	  </links>
+	</mdb-navbar>
+	<!-- Full Page Intro -->
+	<div class="view">
+	  <!-- Mask & flexbox options-->
+	  <div class="mask rgba-gradient d-flex justify-content-center align-items-center">
+		<!-- Content -->
+		<div class="container">
+		  <!--Grid row-->
+		  <div class="row">
+			<!--Grid column-->
+			<div class="col-md-6 white-text text-center text-md-left mt-xl-5 mb-5 wow fadeInLeft" data-wow-delay="0.3s">
+			  <h1 class="h1-responsive font-weight-bold mt-sm-5">Where ideas become reality.</h1>
+			  <hr class="hr-light">
+			  <!-- <a mdbBtn color="white" mdbWavesEffect>I want to post an Idea</a> -->
+			  <a routerLink='/innovatorregistration' mdbBtn color="white" outline="true" mdbWavesEffect>I WANT TO POST AN IDEA</a>
+			  <a routerLink='/serviceproviderregistration' mdbBtn color="white" outline="true" mdbWavesEffect>I WANT TO WORK ON AN IDEA</a>
+					 </div>
+			<!--Grid column-->
+			<!--Grid column-->
+			<div class="col-md-6 col-xl-5 mt-xl-5 wow fadeInUp" data-wow-delay="0.3s">
+
+						<div class="login-wrap">
+	 
+				<div class="login-html">
+					<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">LOGIN</label>
+					<input id="tab-2" type="radio" name="tab" class="for-pwd"><label for="tab-2" class="tab"></label>
+					<div class="login-form">
+						<div class="sign-in-htm">
+							<div class="group">
+								<label for="user" class="label">Email</label>
+								<input #emailId  id="user" type="text" class="input">
+							</div>
+							<div class="group">
+								<label for="pass" class="label">Password</label>
+								<input #password id="pass" type="password" class="input" data-type="password">  
+							</div>
+							<div class="group">
+								<input (click)="authenticateUser(emailId.value, password.value)" type="submit" class="button" value="LOGIN">
+							</div>
+							<div class="hr"></div>
+						</div>
+						<!-- <div class="for-pwd-htm">
+							<div class="group">
+								<label for="user" class="label">Username or Email</label>
+								<input id="user" type="text" class="input">
+							</div>
+							<div class="group">
+								<input type="submit" class="button" value="Reset Password">
+							</div>
+							<div class="hr"></div>
+						</div> -->
+					</div>
+				</div>
+			</div> 
+			</div>
+			<!--Grid column-->
+		  </div>
+		  <!--Grid row-->
+		</div>
+		<!-- Content -->
+	  </div>
+	  <!-- Mask & flexbox options-->
+
+	</div>
+	<!-- Full Page Intro -->
+  </header>
+
+
+
+
+
+
+  

@@ -1,0 +1,254 @@
+body{
+  background-image: url('https://mdbootstrap.com/img/Photos/Others/architecture.jpg'); 
+height:100%; 
+background-repeat: no-repeat; 
+background-size: cover; 
+background-position: center center;
+min-height: 100vh;
+}
+
+.rgba-gradient {
+  background: -moz-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+  background: -webkit-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+  background: -webkit-gradient(linear, 45deg, from(rgba(42, 27, 161, 0.7)), to(rgba(29, 210, 177, 0.7)));
+  background: -o-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+  background: linear-gradient(to 45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%);
+  background: -webkit-linear-gradient(45deg, rgba(42, 27, 161, 0.7), rgba(29, 210, 177, 0.7) 100%)
+}
+
+.my-form{
+    /* min-width: 100px;
+    max-width: 600px;
+    width: 98%;
+    margin-left:10%; */
+    max-width: 500px;
+   
+    
+  }
+
+  mat-form-field{
+    width: 200px;
+  } 
+
+  .height
+  {
+    
+    max-width:600px;
+    background-color:white;
+    padding: 10px;
+    min-width: 80px;
+    margin: auto;
+    border: 2px solid blue;
+    border-top: 0px;
+    margin-bottom: 10%;
+    -webkit-animation: slit-in-vertical 0.5s ease-out 0.2s both;
+	        animation: slit-in-vertical 0.5s ease-out 0.2s both;
+  }
+  .height1
+  {
+    margin: auto;
+    margin-top: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: 2%;
+    max-width:600px;
+    color: black;
+    font-size: 1.5rem;
+    padding: 0px;
+    min-width: 100px;
+    border: 2px solid blue;
+    border-bottom: 0px;
+    -webkit-animation: slit-in-vertical 0.5s ease-out 0.2s both;
+	        animation: slit-in-vertical 0.5s ease-out 0.2s both;
+  }
+
+@-webkit-keyframes slit-in-vertical {
+  0% {
+    -webkit-transform: translateZ(-800px) rotateY(90deg);
+            transform: translateZ(-800px) rotateY(90deg);
+    opacity: 0;
+  }
+  54% {
+    -webkit-transform: translateZ(-160px) rotateY(87deg);
+            transform: translateZ(-160px) rotateY(87deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateZ(0) rotateY(0);
+            transform: translateZ(0) rotateY(0);
+  }
+}
+@keyframes slit-in-vertical {
+  0% {
+    -webkit-transform: translateZ(-800px) rotateY(90deg);
+            transform: translateZ(-800px) rotateY(90deg);
+    opacity: 0;
+  }
+  54% {
+    -webkit-transform: translateZ(-160px) rotateY(87deg);
+            transform: translateZ(-160px) rotateY(87deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateZ(0) rotateY(0);
+            transform: translateZ(0) rotateY(0);
+  }
+}
+
+
+  .form{
+    position: relative;
+    margin-left: 29%;
+    /* margin-right: 10%; */
+    align-content: center;
+  
+}
+.form1{
+  position: relative;
+  font-size: 25px;
+  margin-left: 25%;
+  /* margin-right: 10%; */
+  align-content: center;
+
+}
+.reg
+{
+  margin-left: 41%;
+  margin-top: 1%;
+  background-color:blue;
+}
+
+.btn{
+  background-color:blue;
+  /* display:inline-block; */
+  display: inline-flex;
+  color: white;
+  width: 60px;
+  margin-left: 4%;
+}
+
+
+.btn1{
+  background-color:blue;
+  color: white;
+  /* display:inline-block; */
+  width: 40px;
+  display: inline-flex;
+  /* float: right; */
+  margin-left: 20px;
+  /* display: flex; */
+}
+.btn2{
+  background-color:blue; 
+  color: white;
+  margin-left: 36%;
+  display: inline-flex;
+  width: 40px;
+  float: left;
+}
+
+.btn3{
+  background-color:blue; 
+  color: white;
+  width: 80px;
+  margin-left: 20px;
+}
+
+  .step{
+    max-width: 550px;
+    min-width:80px;
+  }
+  .mat-toolbar{
+    max-width: 600px;
+    margin-left:10%;
+    min-width: 100px;
+  }
+  .my-card{
+
+     min-width: 100px;
+    max-width: 700px;
+    margin-top: 12%;
+    margin-right: 10%;
+    margin-left: 22%;
+  }
+  .mat-dialog-container {
+    display: block;
+    padding: 5px;
+    border-radius: 11px;
+    box-sizing: border-box;
+    overflow: auto;
+    outline: 0;
+    width: 100%;
+    height: 100%;
+    min-height: inherit;
+    max-height: inherit;
+}
+
+.RegHeader{
+  margin-left: 39%;
+}
+
+  @media only screen and (max-width: 500px)
+  {
+    .height
+  {
+    height: 350px;
+    background-color: blue(168, 215, 247);;
+    padding: 1px;
+    min-width: 60px;
+   
+  }
+
+  .btn{
+    background-color:blue(74, 211, 211);
+    display:inline-block;
+    width: 30px;
+    color: white;
+  }
+  .btn1{
+    background-color:blue(74, 211, 211);
+    width: 30px;
+    float:right;
+    color: white;
+    
+  }
+
+  .btn2{
+    background-color:blue(74, 211, 211);
+    width: 8px;
+    color: white;
+    position: relative;
+    margin-left: 5%;
+  }
+  .btn3{
+    background-color:blue(74, 211, 211);
+    color: white;
+    display:inline-block;
+    width: 8px;
+   margin-left:4px;
+    
+  }
+  .form{
+    position: relative;
+    margin-left: 5%;
+  
+    /* margin-right: 10%; */
+    align-content: center;
+  
+}
+.form1{
+  position: relative;
+  font-size: 10px;
+  margin-left: 5%;
+  /* margin-right: 10%; */
+  align-content: center;
+
+}
+.reg
+{
+  margin-left: 30%;
+  margin-top: 1%;
+  background-color:blue(74, 211, 211)
+
+}
+  }
+

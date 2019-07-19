@@ -1,0 +1,13 @@
+{
+	"domain"	:	[
+							{
+								"id" : 1,
+								"domain" : "IT"
+							},
+							
+							{
+								"id" : 2,
+								"domain" : "Tourism"
+							}
+					]
+}

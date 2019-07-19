@@ -1,0 +1,147 @@
+<div class="container">
+        <div class="row rowTitle">
+            <!-- <div class="col-sm"> -->
+            <h2>
+                <b>
+                    {{ideaDetail.title}}                
+                </b>
+            </h2>
+            <!-- </div> -->
+    
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm">
+                <h2><b>
+                        Description:
+                    </b>
+                </h2>
+            </div>
+            <div class="col-sm">
+                <h4>
+                        {{ideaDetail.description}}                </h4>
+            </div>
+    
+        </div>
+        <hr>
+    
+        <div class="row">
+            <div class="col-sm">
+                <h2><b>
+                        Domain:
+                    </b>
+                </h2>
+            </div>
+            <div class="col-sm">
+                <h4>
+                        {{ideaDetail.domain}}                </h4>
+            </div>
+        </div>
+        <hr>
+    
+        <div class="row">
+            <div class="col-sm">
+                <h2><b>
+                        Sub-Domain:
+                    </b>
+                </h2>
+            </div>
+            <div class="col-sm">
+                <h4>
+                        {{ideaDetail.subDomain}}                </h4>
+            </div>
+        </div>
+        <hr>
+    
+        <div class="row">
+            <div class="col-sm">
+                <h2><b>
+                        Budget:
+                    </b>
+                </h2>
+            </div>
+            <div class="col-sm">
+                <h4>
+                        {{ideaDetail.budget}}                </h4>
+            </div>
+        </div>
+        <hr>
+    
+        <div class="row">
+            <div class="col-sm">
+                <h2><b>
+                        Posted on:
+                    </b>
+                </h2>
+            </div>
+            <div class="col-sm">
+                <h4>
+{{ideaDetail.timestamp | date: 'yyyy/MM/dd'}}                </h4>
+            </div>
+        </div>
+        <hr>
+    
+        <div class="row">
+            <div class="col-sm">
+                <h2><b>
+                    Roles:
+               </b>
+                </h2>
+            </div>
+            <div class="col-sm">
+                <h4>
+                        {{ideaDetail.roles}}                     </h4>
+            </div>
+        </div>
+        <hr>
+    
+        <h2>
+            <b> APPROVED USERS: </b>
+        </h2>
+        <hr>
+        <div class="row">
+    
+            <div class="card" *ngFor="let data of ideaDetail.serviceProviders" style="width: 18rem;">
+                <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+                <div class="card-body">
+                    <h5 class="card-title">{{data.role}}</h5>
+                    <p class="card-text">{{data.name}}</p>
+                    <p class="card-text">{{data.emailId}}</p>
+                    <!-- <a routerLink="#" class="btn btn-danger">Go somewhere</a> -->
+                </div>
+            </div>
+    
+        </div>    
+    
+        <hr>
+        <h2>
+            <b>APPLIED USERS :</b>
+        </h2>
+        <hr>
+    
+        <div class="row">
+            <div class="card" *ngFor="let data of appliedSP" style="width: 18rem;">
+                <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+                <div class="card-body">
+                    <h5 class="card-title">Role 1</h5>
+                    <p class="card-text">Name: {{data.name}}</p>
+                    <p class="card-text">Email id:{{data.emailId}}</p>
+                    <a (click)="onApprove(data)" class="btn btn-danger">APPROVE</a>
+                    <a (click)="onReject(data)" class="btn btn-danger">REJECT</a>
+
+                </div>
+            </div>
+
+ 
+        
+            <hr>
+    </div>
+    
+
+
+
+
+
+
+
+
